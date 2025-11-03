@@ -3,7 +3,31 @@
 Analyze hospital **patient encounters**, **costs**, and **behavior trends** to uncover operational and financial insights.
 
 ---
+## Table Overview
+```sql
+SELECT 
+    table_name, 
+    table_rows
+FROM information_schema.tables
+WHERE table_schema = 'hospital_analytics_db';
+```
 
+## Table Record Summary
+| Table Name  | Number of Records |
+|--------------|-------------------|
+| procedures   | 47,463            |
+| payers       | 10                |
+| patients     | 973               |
+| encounters   | 27,763            |
+
+```sql
+SELECT SUM(table_rows) AS total_records
+FROM information_schema.tables
+WHERE table_schema = 'hospital_analytics_db';
+```
+##### Total Records: 76,209
+
+---
 ## Objectives Overview
 
 1. **Encounters Overview**  
