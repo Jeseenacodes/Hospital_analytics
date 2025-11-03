@@ -10,6 +10,77 @@ The analysis is structured around three key objectives:
 
 By investigating these dimensions, the project provides a comprehensive view of hospital performance, uncovering data-driven insights that support **strategic planning**, **cost optimization**, and **quality improvement** across the healthcare system.
 
+```mermaid
+erDiagram
+    PAYERS {
+        char(36) Id PK
+        string NAME
+        string ADDRESS
+        string CITY
+        char(2) STATE_HEADQUARTERED
+        string ZIP
+        string PHONE
+    }
+
+    PATIENTS {
+        char(36) Id PK
+        date BIRTHDATE
+        date DEATHDATE
+        string PREFIX
+        string FIRST
+        string LAST
+        string SUFFIX
+        string MAIDEN
+        char(1) MARITAL
+        string RACE
+        string ETHNICITY
+        char(1) GENDER
+        string BIRTHPLACE
+        string ADDRESS
+        string CITY
+        string STATE
+        string COUNTY
+        string ZIP
+        double LAT
+        double LON
+    }
+
+    PROCEDURES {
+        timestamp START
+        timestamp STOP
+        char(36) PATIENT FK
+        char(36) ENCOUNTER FK
+        string CODE
+        string DESCRIPTION
+        int BASE_COST
+        string REASONCODE
+        string REASONDESCRIPTION
+    }
+
+    ENCOUNTERS {
+        char(36) Id PK
+        datetime START
+        datetime STOP
+        char(36) PATIENT FK
+        char(36) ORGANIZATION
+        char(36) PAYER FK
+        string ENCOUNTERCLASS
+        string CODE
+        string DESCRIPTION
+        decimal BASE_ENCOUNTER_COST
+        decimal TOTAL_CLAIM_COST
+        decimal PAYER_COVERAGE
+        string REASONCODE
+        string REASONDESCRIPTION
+    }
+
+    %% Relationships
+    ENCOUNTERS }o--|| PATIENTS : "belongs_to"
+    ENCOUNTERS }o--|| PAYERS : "covered_by"
+    PROCEDURES }o--|| PATIENTS : "performed_on"
+    PROCEDURES }o--|| ENCOUNTERS : "associated_with"
+```
+
 ## Key Insights Summary
 - Identified **49% of encounters without payer coverage**, representing an estimated **$75M in potential annual revenue losses**.  
 - Observed a **164% increase in patient volume** over the 10-year period, indicating significant growth in hospital utilization.  
