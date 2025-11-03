@@ -4,9 +4,9 @@ This project analyzes over a decade of patient data (2011–2022) from **Massach
 
 The analysis is structured around three key objectives:
 
-1. **Encounters Overview** — Explore encounter trends by **year**, **encounter class**, and **encounter length** to understand hospital activity and patient flow patterns.  
-2. **Cost & Coverage Insights** — Examine **payer coverage**, identify **top procedures**, and analyze **claim cost trends** to reveal areas of financial inefficiency and coverage gaps.  
-3. **Patient Behavior Analysis** — Assess **quarterly admissions** and **readmission patterns** to gain insight into patient behavior and care continuity.
+1. **Encounters Overview** : Explore encounter trends by **year**, **encounter class**, and **encounter length** to understand hospital activity and patient flow patterns.  
+2. **Cost & Coverage Insights** : Examine **payer coverage**, identify **top procedures**, and analyze **claim cost trends** to reveal areas of financial inefficiency and coverage gaps.  
+3. **Patient Behavior Analysis** : Assess **quarterly admissions** and **readmission patterns** to gain insight into patient behavior and care continuity.
 
 By investigating these dimensions, the project provides a comprehensive view of hospital performance, uncovering data-driven insights that support **strategic planning**, **cost optimization**, and **quality improvement** across the healthcare system.
 
@@ -14,8 +14,8 @@ By investigating these dimensions, the project provides a comprehensive view of 
 - Identified **49% of encounters without payer coverage**, representing an estimated **$75M in potential annual revenue losses**.  
 - Observed a **164% increase in patient volume** over the 10-year period, indicating significant growth in hospital utilization.  
 - Detected **771 readmissions within 30 days** during 2021, signaling elevated patient return rates and potential care quality gaps.  
-- Recommended **revenue recovery strategies**, including **pre-visit insurance verification** and **targeted case management** for high-risk patient groups.  
-- Provided actionable insights to support **data-driven decision-making** in hospital operations, cost management, and patient care improvement.
+- Recommended revenue recovery strategies, such as pre-visit insurance verification and targeted case management for high-risk patient groups.
+- Delivered data-driven insights to inform hospital operations, cost optimization, and patient care improvement.
 
 ## Key Findings
 
